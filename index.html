@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Compteur</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+      .vert {
+        background-color: green;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+      }
+
+      .rouge {
+        background-color: red;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+      }
+
+      p {
+        background-color: pink;
+        color: teal;
+        font-size: 1.4rem;
+        width: 150px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      span {
+          color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Tuto VueJS</h1>
+      <h2>Faire un compteur</h2>
+
+      <button class="vert" v-on:click="augmenter()">Augmenter</button>
+      <button class="rouge" v-on:click="diminuer()">Diminuer</button>
+      <p>Compteur: <span>{{compteur}}</span></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          compteur: 0
+        },
+        methods: {
+          augmenter: function() {
+            this.compteur++;
+          },
+          diminuer: function() {
+            this.compteur--;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
