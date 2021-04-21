@@ -67,7 +67,7 @@
 
       p {
         background-color: #ffeaa7;
-        color: #fff;
+        color: rgb(133, 133, 133);
         font-size: 1.4rem;
         width: 150px;
         padding: 10px;
@@ -75,7 +75,7 @@
       }
 
       span {
-        color: #fff;
+        color: rgb(133, 133, 133);
         margin-left: 10px;
         font-size: 1.7rem;
       }
@@ -100,11 +100,11 @@
           compteur: 0
         },
         methods: {
-          augmenter: function() {
+          augmenter: function() { // fonction incrementer nombres
             this.compteur++;
           },
-          diminuer: function() {
-            if (this.compteur < 1) {
+          diminuer: function() { // fonction decrementer nombres
+            if (this.compteur < 1) { // empeche affichage nombres negatifs
               this.compteur = 0;
             } else {
               this.compteur--;
