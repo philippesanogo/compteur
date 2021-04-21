@@ -8,30 +8,65 @@
     <style>
       body {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      #app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #dfe6e9;
+      }
+
+      .container {
+        color: rgb(75, 75, 75);
+        width: 250px;
+        border: 1px solid #fff;
+        height: 300px;
+        border-radius: 10px;
+        background-color: #b2bec3;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+      h2 {
+        color: #fff;
       }
       .vert {
-        background-color: green;
+        width: 150px;
+        background-color: #0984e3;
         color: #fff;
         font-size: 1.2rem;
         padding: 5px 10px;
         border-radius: 10px;
         outline: none;
         border: none;
+        margin-bottom: 5px;
       }
 
       .rouge {
-        background-color: red;
+        width: 150px;
+        background-color: #ff7675;
         color: #fff;
         font-size: 1.2rem;
         padding: 5px 10px;
         border-radius: 10px;
         outline: none;
         border: none;
+        margin-bottom: 75px;
       }
 
       p {
-        background-color: pink;
-        color: teal;
+        background-color: #55efc4;
+        color: #fff;
         font-size: 1.4rem;
         width: 150px;
         padding: 10px;
@@ -39,18 +74,22 @@
       }
 
       span {
-        color: teal;
+        color: #fff;
+        margin-left: 10px;
+        font-size: 1.7rem;
       }
     </style>
   </head>
   <body>
     <div id="app">
       <h1>Tuto VueJS</h1>
-      <h2>Faire un compteur</h2>
+      <div class="container">
+        <h2>Compteur</h2>
 
-      <button class="vert" v-on:click="augmenter()">Augmenter</button>
-      <button class="rouge" v-on:click="diminuer()">Diminuer</button>
-      <p>Compteur: <span>{{compteur}}</span></p>
+        <button class="vert" v-on:click="augmenter()">Augmenter</button>
+        <button class="rouge" v-on:click="diminuer()">Diminuer</button>
+        <p>Compteur: <span>{{compteur}}</span></p>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
