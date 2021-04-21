@@ -87,8 +87,11 @@
       <div class="container">
         <h2>Compteur</h2>
 
+        <!-- ajoute evenement au click avec v-on:click="" -->
         <button class="vert" v-on:click="augmenter()">Augmenter</button>
         <button class="rouge" v-on:click="diminuer()">Diminuer</button>
+
+        <!-- utilise interpolation pour afficher la valeur de la variable compteur -->
         <p>Compteur: <span>{{compteur}}</span></p>
       </div>
     </div>
